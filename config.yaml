@@ -1,0 +1,15 @@
+llm:
+  provider: "openai"         # openai | ollama | none
+  model: "gpt-4o-mini"       # used when provider=openai
+  ollama_model: "llama3.1"   # used when provider=ollama
+
+tts:
+  provider: "piper"          # piper | say | openai | elevenlabs
+  piper_voice: "/path/to/en_US-amy-medium.onnx"
+  piper_voice_json: "/path/to/en_US-amy-medium.onnx.json"
+  openai_voice: "alloy"      # example OpenAI TTS voice
+  eleven_voice: "Rachel"     # example ElevenLabs voice
+
+style:
+  target_minutes: 12
+  wpm: 150
