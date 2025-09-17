@@ -1,7 +1,7 @@
 # DISCLAIMER:  THIS SOFTWARE WAS ENTIRELY VIBE CODED.  I CHECKED NOTHING, AND MAKE ABSOLUTELY NO GUARANTEES ABOUT IT. 
 
 
-# paper2audio (Go)
+# Reviewer2
 
 Convert an academic paper **PDF → concise audio overview (~10–15 min)** for drive-time listening. 
 Neutral tone, no hype, not a verbatim read-through.
@@ -28,21 +28,21 @@ Neutral tone, no hype, not a verbatim read-through.
 # d) ElevenLabs: set ELEVEN_API_KEY and pick a voice
 
 # build
-cd paper2audio
+cd reviewer2
 go mod tidy
-go build ./cmd/paper2audio
+go build ./cmd/reviewer2
 ```
 
 ## Usage
 ```bash
-./paper2audio \
+./reviewer2 \
   --pdf "/path/to/paper.pdf" \
   --out "/tmp/paper.m4a" \  --minutes 12 \  --llm openai \  --tts piper \  --piper-voice /path/to/en_US-amy-medium.onnx \  --piper-json  /path/to/en_US-amy-medium.onnx.json
 ```
 
 Quick test with macOS TTS:
 ```bash
-./paper2audio --pdf paper.pdf --out paper.m4a --llm ollama --model llama3.1 --tts say
+./reviewer2 --pdf paper.pdf --out paper.m4a --llm ollama --model llama3.1 --tts say
 ```
 
 ## Config (optional)

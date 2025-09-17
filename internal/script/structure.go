@@ -5,7 +5,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/example/paper2audio/internal/pdfx"
+	"github.com/msherr/reviewer2/internal/pdfx"
 )
 
 func TargetWordCount(minutes, wpm int) int {

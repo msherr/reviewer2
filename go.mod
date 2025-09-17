@@ -1,4 +1,4 @@
-module github.com/example/paper2audio
+module github.com/msherr/reviewer2
 
 go 1.24.1
 
