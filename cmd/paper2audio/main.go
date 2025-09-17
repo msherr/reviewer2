@@ -7,7 +7,6 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-	"time"
 
 	"github.com/example/paper2audio/internal/pdfx"
 	"github.com/example/paper2audio/internal/script"
