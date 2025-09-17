@@ -1,3 +1,6 @@
+# DISCLAIMER:  THIS SOFTWARE WAS ENTIRELY VIBE CODED.  I CHECKED NOTHING, AND MAKE ABSOLUTELY NO GUARANTEES ABOUT IT. 
+
+
 # paper2audio (Go)
 
 Convert an academic paper **PDF → concise audio overview (~10–15 min)** for drive-time listening. 
