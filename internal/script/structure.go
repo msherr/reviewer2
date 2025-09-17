@@ -23,15 +23,15 @@ func MakePrompt(doc *pdfx.Doc, targetWords int) string {
 	if len(abstract) > 1800 { abstract = abstract[:1800] }
 
 	return fmt.Sprintf(`You are an expert technical writer and reviewer.
-Produce a single-narrator audio-ready script of about %d words (±10%%) that presents a neutral, analytical overview of the following academic paper for a listener who is driving.
+Produce a single-narrator audio-ready script of about %d words (±10%%) that presents a rigorous, technically detailed overview of the following academic paper for a listener who is a subject-matter expert.
 
 Hard requirements:
-- Use concise, medium-length sentences with natural cadence.
-- No hype, no back-and-forth dialog, no sycophancy.
-- Include: (1) context & motivation, (2) precise problem statement, (3) core approach/method, (4) key findings/results with units if available, (5) strengths AND limitations/caveats, (6) bottom-line takeaway and when to read the full paper.
-- Avoid formulas and long lists; prefer plain-language descriptions of what the method does.
-- Cite section names sparingly in-line if clearly present (e.g., “In the evaluation section…”).
-- Do not fabricate details not supported by the paper.
+- Use concise, medium-length sentences with natural cadence suitable for audio.
+- Maintain a neutral, analytical tone; no hype, dialog, or sycophancy.
+- Cover in order: (1) research context and explicit motivation, (2) formal problem statement and assumptions, (3) technical approach with architecture/algorithm specifics, training or implementation details, and key hyperparameters, (4) evaluation setup including datasets, baselines, metrics, and quantitative results, (5) critical analysis of strengths, limitations, and failure cases, (6) actionable takeaway highlighting when the method is useful and when the full paper merits deeper study.
+- Emphasize concrete technical details that informed peers would expect; mention ablations, resource requirements, or theoretical guarantees if the paper provides them.
+- Cite section names or figure references sparingly when they provide orientation (e.g., “In Section 4’s evaluation…”).
+- Do not fabricate details; if information is missing in the paper, state that explicitly instead of guessing.
 
 Paper metadata (may be noisy due to PDF extraction):
 Title: %s
